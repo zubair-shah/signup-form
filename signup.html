@@ -22,20 +22,21 @@
     <h1>signup page
 
     </h1> 
-    <!-- <form > -->
+    <form onsubmit="return false">
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input type="password" required class="form-control" id="password" placeholder="Password">
         </div>
        
         <button type="submit" class="btn btn-primary" onclick="onSignUp()">Sign Up</button>
  <a href="login.html"> I have an account</a>
-      <!-- </form> -->
+ <p class="para" id="login-success"></p>
+      </form>
 
 
     <script src="app.js"></script>

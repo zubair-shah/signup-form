@@ -6,41 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 id="username"></h3>
+            </div>
 
-    <!-- <div class="auth-form">
-        <label for="email">Email:</label>
-        <input type="text" id="emial">
-        <br>
-        <label for="password">Password:</label>
-        <input type="text" id="password">
-        <br>
-        <button>Sign In</button>
-        
-    </div> -->
-    <h1>index page
+            <ul class="list-unstyled components">
+                <h3 id="detail"></h3>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="#">Home 1</a></li>
+                        <li><a href="#">Home 2</a></li>
+                        <li><a href="#">Home 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
 
-    </h1>
-    <!-- <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
+            <ul class="list-unstyled CTAs">
+                <li><a href="#" class="download" id="message">Admin Login</a></li>
+                <li><a href="" class="article">
+                <button type="button" class="btn btn-danger" onclick="onLogout()">Logout</button>
+
+                </a></li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
        
-        <button type="submit" class="btn btn-primary">Submit</button>
- <a href="login.html"> I have an account</a>
-      </form> -->
+        
+    </div>
+    </div>
+    <div class="col-md-8">
+  
+      <div class="todo-form">
+        <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Give Title</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title input">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Give Discription</label>
+          <textarea name="" id="" cols="8" rows="4"  class="form-control" id="formGroupExampleInput2" placeholder="Discription input"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="card-heading">
+          <h1>Your Todo List</h1>
+        </div>
+    
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+     
+        </div>
+    
+      </div>
+      
+       
+    
 
+    </div>
+  </div>
 
-    <script src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+           <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+          <!-- Bootstrap Js CDN -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <!-- jQuery Custom Scroller CDN -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+          <script src="app.js"></script>
 </body>
 </html>

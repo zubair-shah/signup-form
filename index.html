@@ -10,49 +10,38 @@
   <!------ Include the above in your HEAD tag ---------->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="getCurrentUser();">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3 id="username"></h3>
+              <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="">
+              <p id="detial"></p>
             </div>
 
             <ul class="list-unstyled components">
-                <h3 id="detail"></h3>
+               
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Home 1</a></li>
-                        <li><a href="#">Home 2</a></li>
-                        <li><a href="#">Home 3</a></li>
-                    </ul>
+                    <a href="#homeSubmenu" id="FullName">Home</a>
+                   
                 </li>
                 <li>
-                    <a href="#">About</a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
-                    </ul>
+                    <a href="#" id="PhoneNumber">About</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" id="Email" >Pages</a>
+                  
                 </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+           
+               
             </ul>
 
-            <ul class="list-unstyled CTAs">
+            <ul class=" CTAs">
                 <li><a href="#" class="download" id="message">Admin Login</a></li>
-                <li><a href="" class="article">
+                <li style="text-align: center;">
                 <button type="button" class="btn btn-danger" onclick="onLogout()">Logout</button>
 
-                </a></li>
+                </li>
                 
             </ul>
         </nav>
@@ -63,45 +52,33 @@
     </div>
     </div>
     <div class="col-md-8">
+  <div class="main-todo">
+    <div class="todo-form">
+      <form onsubmit="return false">
+        <div class="form-group">
+          <h3>Set Your Work with Your choice</h3>
+          <label for="formGroupExampleInput">Your Title here</label>
+          <input type="text" class="form-control" id="titleInput" placeholder="Title input">
+          <label for="formGroupExampleInput">Your Discription here</label>
+          <input type="text" class="form-control" id="discriptionInput" placeholder="Discription input">
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="todo();">create Todo</button>
+      </form>
+    </div>
+    <div class="row">
+      <div class="card-heading">
+        <h1>Your Todo List</h1>
+      </div>
+  <div class="row"  id="display">
+   
+    </div>
+  </div>
+      
   
-      <div class="todo-form">
-        <form>
-          <div class="form-group">
-            <label for="formGroupExampleInput">Give Title</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title input">
-          </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">Give Discription</label>
-          <textarea name="" id="" cols="8" rows="4"  class="form-control" id="formGroupExampleInput2" placeholder="Discription input"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="row">
-        <div class="card-heading">
-          <h1>Your Todo List</h1>
-        </div>
-    
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+    </div>
+  </div>
      
-        </div>
-    
-      </div>
       
        
     
@@ -109,11 +86,6 @@
     </div>
   </div>
 
-           <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-          <!-- Bootstrap Js CDN -->
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-          <!-- jQuery Custom Scroller CDN -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-          <script src="app.js"></script>
+          <script src="app.js"></script> 
 </body>
 </html>

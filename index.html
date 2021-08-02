@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="getCurrentUser();">
+  <div class="header">
+    <button class="btn navbar-btn" onclick="navbarBtn()">//</button>
+  </div>
   <div class="row">
     <div class="col-md-3">
       <div class="wrapper">
@@ -24,12 +27,12 @@
             <ul class="list-unstyled components">
                
                 <li class="active">
-                    <a href="#homeSubmenu" id="FullName">Home</a>
+                    <a href="#homeSubmenu" id="FullName">Name</a>
                    
                 </li>
                 <li>
-                    <a href="#" id="PhoneNumber">About</a>
-                    <a href="#pageSubmenu" data-toggle="collapse" id="Email" >Pages</a>
+                    <a href="#" id="PhoneNumber">Phone</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" id="Email" >Email</a>
                   
                 </li>
            
@@ -58,7 +61,7 @@
         <div class="form-group">
           <h3>Set Your Work with Your choice</h3>
           <label for="formGroupExampleInput">Your Title here</label>
-          <input type="text" class="form-control" id="titleInput" placeholder="Title input">
+          <input type="text" required class="form-control" id="titleInput" placeholder="Title input">
           <label for="formGroupExampleInput">Your Discription here</label>
           <input type="text" class="form-control" id="discriptionInput" placeholder="Discription input">
         </div>
@@ -71,7 +74,7 @@
         <h1>Your Todo List</h1>
       </div>
   <div class="row"  id="display">
-   
+    <!-- <div class="col-md-4"><div class="mt-35px card-deck"><div class="card"><img src="https://media.istockphoto.com/photos/check-off-a-todo-list-with-a-black-pen-picture-id1212554542?k=6&amp;m=1212554542&amp;s=612x612&amp;w=0&amp;h=dAEORdxXuwjVzkuSvnqNfZaCD1mNq9dupvQzqyKooh8=" class="card-img-top"><div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p></div><button id="delet" class="btn btn-danger " onclick="deletitem(this)">DELET</button></div></div></div> -->
     </div>
   </div>
       
@@ -87,5 +90,6 @@
   </div>
 
           <script src="app.js"></script> 
+          
 </body>
 </html>
